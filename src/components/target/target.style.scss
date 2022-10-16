@@ -1,0 +1,12 @@
+.target {
+  display: flex;
+
+  z-index: 1;
+  align-items: center;
+  .target-icon {
+    width: 120px;
+  }
+  .target-title {
+    color: rgb(222, 186, 255);
+  }
+}
