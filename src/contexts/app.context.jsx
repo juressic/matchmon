@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
   const [targetId, setTargetId] = useState(0);
   const [gameCompleted, setGameCompleted] = useState(false);
   const [gameFailed, setGameFailed] = useState(false);
-  const [gameDifficulty, setGameDifficulty] = useState(2);
+  const [gameDifficulty, setGameDifficulty] = useState(8);
 
   const addMonsterId = () => {
     let newArray = [...monsters];

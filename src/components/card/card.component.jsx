@@ -28,7 +28,7 @@ const Card = ({ monster }) => {
   };
   const randomize = (amount) => {
     let num = Math.floor(Math.random() * amount) + 1;
-    //if (num === monster.mId) num += 1;
+    if (num === monster.mId) num += 1;
 
     setMonsterId(num);
 
