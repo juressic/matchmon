@@ -12,7 +12,20 @@ export const AppProvider = ({ children }) => {
   const [targetId, setTargetId] = useState(0);
   const [gameCompleted, setGameCompleted] = useState(false);
   const [gameFailed, setGameFailed] = useState(false);
-  const [gameDifficulty, setGameDifficulty] = useState(10);
+  const [gameDifficulty, setGameDifficulty] = useState(2);
+
+  const addMonsterId = () => {
+    let newArray = [...monsters];
+    newArray.map((mon) => {
+      mon.mId = Math.floor(Math.random() * gameDifficulty) + 1;
+    });
+
+    setMonsters(newArray);
+  };
+
+  useEffect(() => {
+    addMonsterId();
+  }, []);
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')

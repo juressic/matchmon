@@ -28,7 +28,7 @@ const Card = ({ monster }) => {
   };
   const randomize = (amount) => {
     let num = Math.floor(Math.random() * amount) + 1;
-    if (num === monster.mId) num += 1;
+    //if (num === monster.mId) num += 1;
 
     setMonsterId(num);
 
@@ -51,7 +51,9 @@ const Card = ({ monster }) => {
   };
 
   const winConditionCheck = () => {
-    const checkWin = monsters.every((m) => targetId === m.mId || undefined);
+    const checkWin = monsters.every(
+      (m) => targetId === m.mId //|| m.mId === undefined || monster.mId === null
+    );
     if (checkWin) {
       setGameCompleted(true);
     } else setGameCompleted(false);
