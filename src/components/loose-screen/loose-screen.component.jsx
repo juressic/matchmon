@@ -13,7 +13,7 @@ const LooseScreen = () => {
 
   return (
     <div className="loose-screen">
-      <h1 className="loose-title">YOU LOOSE</h1>
+      <h1 className="loose-title">YOU LOSE</h1>
       <button onClick={restartHandler} className="restart-btn">
         RESTART GAME
       </button>
